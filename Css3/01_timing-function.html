@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>cubic-bezier</title>
+	<style>
+		div{
+			width:100px;
+			height:100px;
+			background:red;
+			position:relative;
+			animation:mymove 5s infinite;
+			/*animation-timing-function:linear;*/
+			/*-webkit-animation-timing-function:cubic-bezier(0.1,-0.6,0.2,0);*/
+			-webkit-animation-timing-function:steps(10,end);
+
+		 /*Safari and Chrome */
+			/*-webkit-animation:mymove 5s infinite;*/
+			/*-webkit-animation-timing-function:linear;*/
+		}
+
+		@keyframes mymove
+		{
+			from {height:500px;}
+			to {height:0px;}
+		}
+
+		@-webkit-keyframes mymove /* Safari and Chrome */
+		{
+			from {height:500px;}
+			to {height:0px;}
+		}
+	</style>
+</head>
+<body>
+<div></div>
+</body>
+</html>
